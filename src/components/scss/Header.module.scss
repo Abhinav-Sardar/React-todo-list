@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+$accent-color: #45aafd;
+
+.header__wrapper {
+  text-align: center;
+  color: $accent-color;
+  .header {
+    font-size: 4vw;
+    margin-top: 1vw;
+    font-family: "Akaya Kanadaka", cursive;
+  }
+  i {
+    color: rgb(0, 195, 255);
+    font-size: 13vw;
+    animation: spinner 20s infinite linear;
+  }
+  h2 {
+    font-family: "Akaya Kanadaka", cursive;
+    font-size: 2vw;
+  }
+}
+
+@keyframes spinner {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

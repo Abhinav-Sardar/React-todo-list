@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+.header__wrapper {
+  text-align: center;
+  color: #45aafd;
+}
+
+.header__wrapper .header {
+  font-size: 4vw;
+  margin-top: 1vw;
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+.header__wrapper i {
+  color: #00c3ff;
+  font-size: 13vw;
+  -webkit-animation: spinner 20s infinite linear;
+          animation: spinner 20s infinite linear;
+}
+
+.header__wrapper h2 {
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 2vw;
+}
+
+@-webkit-keyframes spinner {
+  from {
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=Header.module.css.map */
