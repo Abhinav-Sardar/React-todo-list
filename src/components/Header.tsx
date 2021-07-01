@@ -1,7 +1,5 @@
 import React, { FC, Fragment } from "react";
 //@ts-ignore"
-import Logo from "../Logo.svg";
-//@ts-ignore"
 import styles from "./css/Header.module.css";
 const Header: FC = () => {
   return (
