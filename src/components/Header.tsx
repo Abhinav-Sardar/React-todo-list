@@ -1,7 +1,8 @@
-import React, { FC, Fragment } from "react";
+import React, { FC, Fragment, memo } from "react";
 //@ts-ignore"
 import styles from "./css/Header.module.css";
 const Header: FC = () => {
+  console.log("render");
   return (
     <Fragment>
       <div className={styles.header__wrapper}>
@@ -12,4 +13,4 @@ const Header: FC = () => {
     </Fragment>
   );
 };
-export default Header;
+export default memo(Header);

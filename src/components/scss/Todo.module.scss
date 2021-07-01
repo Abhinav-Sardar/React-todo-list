@@ -1,0 +1,19 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo__wrapper {
+  @include flex();
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  .todo {
+    font-size: 2vw;
+    border: 1px solid black;
+    // flex: 3;
+    width: 70vw;
+    @include flex();
+    justify-content: flex-start;
+  }
+}

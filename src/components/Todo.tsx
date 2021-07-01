@@ -1,5 +1,5 @@
 import { FC, Fragment } from "react";
-
+import styles from "./css/Todo.module.css";
 export interface todoProps {
   task: string;
   isDeadline?: boolean;
@@ -9,7 +9,7 @@ export interface todoProps {
 const Todo: FC<todoProps> = ({ task, isDeadline, deadline }) => {
   return (
     <Fragment>
-      <h1>{task}</h1>
+      <div className={styles.todo}>{task}</div>
     </Fragment>
   );
 };
