@@ -5,12 +5,12 @@ $accent-color: #45aafd;
   align-items: center;
 }
 .todo__wrapper {
+  transition: 1s ease-in-out;
   @include flex();
   width: 100vw;
   flex-direction: column;
   justify-content: center;
   .todo {
-    text-overflow: ellipsis;
     border: 1px solid black;
     color: white;
     // flex: 3;
@@ -21,15 +21,26 @@ $accent-color: #45aafd;
     background-color: $accent-color;
     margin: 1vh 0;
     flex-wrap: wrap;
+
     .index {
       font-size: 1.5vw;
     }
     .task {
       font-size: 1.7vw;
+      text-overflow: ellipsis;
     }
     i {
       font-size: 1.5vw;
       margin: 0 0.5vw;
     }
+    .due {
+      font-size: 1.7vw;
+    }
+    border-radius: 10px;
+  }
+}
+@keyframes disappear {
+  to {
+    opacity: 0;
   }
 }

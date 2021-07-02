@@ -1,4 +1,6 @@
 .todo__wrapper {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +19,6 @@
 }
 
 .todo__wrapper .todo {
-  text-overflow: ellipsis;
   border: 1px solid black;
   color: white;
   width: 70vw;
@@ -38,6 +39,7 @@
   margin: 1vh 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-radius: 10px;
 }
 
 .todo__wrapper .todo .index {
@@ -46,10 +48,27 @@
 
 .todo__wrapper .todo .task {
   font-size: 1.7vw;
+  text-overflow: ellipsis;
 }
 
 .todo__wrapper .todo i {
   font-size: 1.5vw;
   margin: 0 0.5vw;
+}
+
+.todo__wrapper .todo .due {
+  font-size: 1.7vw;
+}
+
+@-webkit-keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=Todo.module.css.map */

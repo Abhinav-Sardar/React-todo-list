@@ -10,14 +10,29 @@ export interface todoProps {
 }
 
 const Todo: FC<todoProps> = ({ task, isDeadline, deadline, index }) => {
-  return (
-    <Fragment>
-      <div className={styles.todo}>
-        <div className={styles.index}>{index}.</div>
-        <div className={styles.task}>{task}</div>
-        <Actions index={index!} />
-      </div>
-    </Fragment>
-  );
+  if (!deadline) {
+    return (
+      <Fragment>
+        <div className={styles.todo}>
+          <div className={styles.index}>{index}</div>
+          <div className={styles.task}>{task}</div>
+          <Actions index={index!} />
+        </div>
+      </Fragment>
+    );
+  } else {
+    return (
+      <Fragment>
+        <section className={styles.todo}>
+          <div className={styles.index}>{index}</div>
+          <div className={styles.task}>{task}</div>
+          <div className={styles.due}>
+            Due:{String(deadline.toLocaleDateString())}
+          </div>
+          <Actions index={index!} />
+        </section>
+      </Fragment>
+    );
+  }
 };
 export default Todo;

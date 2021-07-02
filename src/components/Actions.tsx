@@ -2,7 +2,9 @@ import { useContext, useRef } from "react";
 import { FC, Fragment } from "react";
 import { TodosContext } from "../App";
 import { todoProps } from "./Todo";
+
 const Actions: FC<Props> = ({ index }) => {
+  const currentDeletedTodoRef = useRef<null | HTMLElement>();
   const [todos, setTodos] = useContext(TodosContext);
   const handleFinished = (index: number) => {
     console.log(index);
@@ -12,8 +14,6 @@ const Actions: FC<Props> = ({ index }) => {
     setTodos(newTodos);
   };
 
-  const completeRef = useRef<HTMLLIElement>();
-  const deleteRef = useRef();
   return (
     <Fragment>
       <div className="icon__wrapper">
@@ -22,11 +22,8 @@ const Actions: FC<Props> = ({ index }) => {
           style={{
             color: "lime",
           }}
-          //@ts-ignore
-          ref={completeRef}
           onClick={() => {
-            //@ts-ignore
-            completeRef.current.style.backgroundColor = "blue";
+            handleFinished(index);
           }}
         ></i>
         <i
@@ -34,8 +31,9 @@ const Actions: FC<Props> = ({ index }) => {
           style={{
             color: "red",
           }}
-          //@ts-ignore
-          ref={deleteRef}
+          onClick={() => {
+            handleFinished(index);
+          }}
         ></i>
       </div>
     </Fragment>
