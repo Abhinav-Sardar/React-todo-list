@@ -9042,6 +9042,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-bottom-scroll@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-bottom-scroll/-/react-bottom-scroll-1.1.2.tgz#94e85a50a79d41632e182d1677109e183ce18930"
+  integrity sha512-lHtCkMyPjViAKW1+lWwrn8R0tWhxJZldcxcAVQMADy6+jOM7ezBRw22yr1FDy294KXFaOUJ/fk9+WwKvmrvB8A==
+
 react-calendar@^3.3.1:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-3.4.0.tgz#25396ca0992b3b2042abca334515f6ff4d9878bc"

@@ -1,3 +1,4 @@
+$accent-color: #45aafd;
 @mixin flex {
   display: flex;
   justify-content: center;
@@ -9,11 +10,26 @@
   flex-direction: column;
   justify-content: center;
   .todo {
-    font-size: 2vw;
+    text-overflow: ellipsis;
     border: 1px solid black;
+    color: white;
     // flex: 3;
     width: 70vw;
+    padding: 0.5vw;
     @include flex();
-    justify-content: flex-start;
+    justify-content: space-between;
+    background-color: $accent-color;
+    margin: 1vh 0;
+    flex-wrap: wrap;
+    .index {
+      font-size: 1.5vw;
+    }
+    .task {
+      font-size: 1.7vw;
+    }
+    i {
+      font-size: 1.5vw;
+      margin: 0 0.5vw;
+    }
   }
 }
