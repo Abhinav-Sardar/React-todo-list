@@ -59,16 +59,4 @@
 .todo__wrapper .todo .due {
   font-size: 1.7vw;
 }
-
-@-webkit-keyframes disappear {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes disappear {
-  to {
-    opacity: 0;
-  }
-}
 /*# sourceMappingURL=Todo.module.css.map */
